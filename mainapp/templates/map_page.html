@@ -1,0 +1,293 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="user-scalable = yes">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+      <script type='text/javascript' src="{% static 'js/switcher.js' %}"></script>
+      <link rel="stylesheet" href="{% static 'css/style-switch.css' %}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+      <link rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/horizontal.css' %}"/>
+      <link rel='stylesheet' id='style-css'  href="{% static 'css/slider.css' %}" type='text/css' media='all'/>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-combined.min.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-responsive.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/webticker.css' %} " type="text/css" media="screen"/>
+      <title>News time</title>
+      <style type="text/css">
+         body{
+         font-family: 'Open Sans';
+         font-style: normal;
+         font-weight: 400;
+         }
+         .nav-tabs > li > a.blnone{border-left:none !important;}
+         .nav-tabs > li > a.brnone{border-right:none !important;}	
+      </style>
+      <script type="text/javascript">
+         /*this is slider triger and useing only slider pages*/
+         $(function(){
+         "use strict";
+         	$('.pix_diapo').diapo();
+         });
+         $(function(){
+         "use strict";
+         	$('.link').tooltip()
+         });
+      </script>
+   </head>
+   <body>
+      <!--=======================================TOP NAV=================================================-->
+      <div class="top-nav">
+         <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+               <div class="container">
+                  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <div class="nav-collapse collapse">
+                     <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="company.html">Features</a></li>
+                        <li><a href="gallery.html">Most Popular</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                     </ul>
+                  </div>
+                  <!--/.nav-collapse -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--================================================================================================-->
+      <!--========================================LOGO AND AD=================================================-->
+      <div class="container header clearfix">
+         <div class="logo pull-left">
+            <a href="index.html">
+            <img src="images/logo_03.png"  alt="logo image"/>
+            </a>
+         </div>
+         <div class="header-ad pull-right">
+            <img src="images/header-ad_03.png" alt="header ad" />
+         </div>
+      </div>
+      <!--================================================================================================-->
+      <!--=========================================MAIN NAV===============================================-->
+      <div class="main-nav">
+         <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+               <div class="container">
+                  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <div class="nav-collapse collapse">
+                     <ul class="nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url 'mainapp:map_filter' %}">Expert Tools</a></li>
+                      
+                     </ul>
+                  </div>
+                  <!--/.nav-collapse -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--================================================================================================-->
+      <!--========================================MAIN CONTAINER============================================-->
+      <!--================================================================================================-->
+      <div class="container">
+         <div>
+            <form style="display:flex;">
+               <select name="cars" id="cars">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+
+                <select name="cars" id="cars">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+
+                <button type="button" class="btn btn-primary">Primary</button>
+            </form>
+         </div>
+
+         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+         <!--=========================================NEWS TICKER=========================================-->
+       
+         <!--two sidebar's container end-->
+      </div>
+      <!--==============================================END MAIN CONTAINER=========================================-->
+      <footer>
+         <div class="footer">
+            <div class="container fot-wrap">
+               <div class="span3 colum">
+                  <div class="fot-logo">
+                     <img src="images/footer-logo-blue.png" alt="footer logo" />
+                  </div>
+                  <div class="fot-about">
+                     <p>
+                        <span class="dates"> Nam nec tellus</span> a odio tincidunt auctor a ornare
+                        odio. Sed non  mauris vitae erat consequat 
+                        auctor eu in elit. Class aptent taciti sociosqu ad 
+                        litora torquent per conubia nostra mauris vitae erat consequat auctor eu in elit...
+                     </p>
+                  </div>
+               </div>
+               <div class="colum span3 clearfix">
+                  <h2 class="fot-title">Flicker Widget</h2>
+                  <div class="flick-imgs clearfix">
+                     <div class="flick-img pull-left">
+                        <img src="images/posts/footer1.jpg" alt="flicker" />
+                     </div>
+                     <div class="flick-img pull-left">
+                        <img src="images/posts/footer2.jpg" alt="flicker" />
+                     </div>
+                     <div class="flick-img pull-left">
+                        <img src="images/posts/footer5.jpg" alt="flicker" />
+                     </div>
+                  </div>
+                  <div class="flick-imgs clearfix">
+                     <div class="flick-img pull-left">
+                        <img src="images/posts/footer4.jpg" alt="flicker" />
+                     </div>
+                     <div class="flick-img pull-left">
+                        <img src="images/posts/footer1.jpg" alt="flicker" />
+                     </div>
+                     <div class="flick-img pull-left">
+                        <img src="images/posts/footer2.jpg" alt="flicker" />
+                     </div>
+                  </div>
+               </div>
+               <div class="colum span3">
+                  <h2 class="fot-title">Recent Tweets</h2>
+                  <div class="single-tweet">
+                     <p class="post-description">
+                        ulla cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                     </p>
+                     <span class="dates pull-right">2 hours ago</span>
+                  </div>
+                  <div class="single-tweet">
+                     <p class="post-description">
+                        ulla cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                     </p>
+                     <span class="dates pull-right">2 hours ago</span>
+                  </div>
+                  <div class="single-tweet">
+                     <p class="post-description">
+                        ulla cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                     </p>
+                     <span class="dates pull-right">2 hours ago</span>
+                  </div>
+               </div>
+               <div class="colum fot-contact span3">
+                  <h2 class="fot-title">Contact Info &amp; Timing</h2>
+                  <div class="location">Office Ad: Salt Lake City, UT 87234</div>
+                  <div class="fone">Phone: (871) 321-6567</div>
+                  <div class="mail">E-mail: Example@website.com</div>
+                  <div class="time">Time: Mon to Fri - 09:00 am to 05:00 pm Sat 09:00 am to 01:00 pm Sunday closed</div>
+               </div>
+            </div>
+         </div>
+         <div class="bottom">
+            <div class="container">
+               <div class="copyrights pull-left">
+                  Copyrights 2013 @ <span class="white">NewsTimes</span>
+               </div>
+               <div class="pull-right social">
+                  <h2 class="title">Lets Social:</h2>
+                  <div class="s-icon">
+                     <a href="#" class="link t" data-original-title='Tumbler'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link f" data-original-title='Facebook'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link g" data-original-title='Google Plus'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link twit" data-original-title='Twitter'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link vimeo" data-original-title='Vimeo'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link skype" data-original-title='Skype'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link lin" data-original-title='LinkedIn'></a>
+                  </div>
+                  <div class="s-icon">
+                     <a href="#" class="link drib" data-original-title='Dribble'></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+        
+         <!-- end-style-selector -->
+       
+         <script type="text/javascript" src="{% static 'js/jquery.webticker.js' %}"></script>
+         <script type='text/javascript' src="{% static 'js/slider/jquery.easing.1.3.js' %}"></script> 
+         <script type='text/javascript' src="{% static 'js/slider/jquery.hoverIntent.minified.js' %}"></script> 
+         <script type='text/javascript' src="{% static 'js/slider/diapo.js' %}"></script> 
+         <script type="text/javascript" src="{% static 'js/horizental/modernizr.js' %}"></script>
+         <script type="text/javascript" src="{% static 'js/horizental/plugins.js' %}"></script>
+         <script type="text/javascript" src="{% static 'js/horizental/sly.js' %}"></script>
+         <script type="text/javascript" src="{% static 'js/horizental/horizontal.js' %}"></script>
+         <!--[if !IE]><!--><script type='text/javascript' src="{% static 'js/slider/jquery.mobile-1.0rc2.customized.min.js' %}"></script><!--<![endif]-->
+      </footer>
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-46720718-1', 'joinwebs.org');
+         ga('send', 'pageview');
+         
+      </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+   var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+   var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+   
+   new Chart("myChart", {
+     type: "line",
+     data: {
+       labels: xValues,
+       datasets: [{
+         fill: false,
+         lineTension: 0,
+         backgroundColor: "rgba(0,0,255,1.0)",
+         borderColor: "rgba(0,0,255,0.1)",
+         data: yValues
+       }]
+     },
+     options: {
+       legend: {display: false},
+       scales: {
+         yAxes: [{ticks: {min: 6, max:16}}],
+       }
+     }
+   });
+   </script>
+   
+<body>
+
+   </body>
+</html>

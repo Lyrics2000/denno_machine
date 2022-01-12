@@ -1,7 +1,9 @@
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
+asgiref==3.4.1
 attrs==21.4.0
 backcall==0.2.0
+backports.zoneinfo==0.2.1
 bleach==4.1.0
 cffi==1.15.0
 cycler==0.11.0
@@ -9,6 +11,7 @@ Cython==0.29.26
 debugpy==1.5.1
 decorator==5.1.0
 defusedxml==0.7.1
+Django==4.0.1
 entrypoints==0.3
 fonttools==4.28.5
 importlib-resources==5.4.0
@@ -62,6 +65,7 @@ scikit-learn==1.0.2
 scipy==1.7.3
 Send2Trash==1.8.0
 six==1.16.0
+sqlparse==0.4.2
 statsmodels==0.13.1
 terminado==0.12.1
 testpath==0.5.0

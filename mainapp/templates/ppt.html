@@ -49,7 +49,7 @@
       <!--========================================LOGO AND AD=================================================-->
       <div class="container header clearfix">
          <div class="logo pull-left">
-            <a href="index.html">
+            <a href="/">
             Farmers Prediction
             </a>
          </div>
@@ -111,7 +111,8 @@
        
          <!--two sidebar's container end-->
       </div>
-    
+      <!--==============================================END MAIN CONTAINER=========================================-->
+      
       <script>
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -131,7 +132,7 @@
        data: {
            labels: [{% for n in x_data %} '{{n}}', {% endfor %}],
            datasets: [{
-               label: 'Maximum Prices',
+               label: 'Precipitation',
                data: [{% for n in y_data %} {{n}}, {% endfor %}],
                backgroundColor: [
                    'rgba(255, 99, 132, 0.2)',
